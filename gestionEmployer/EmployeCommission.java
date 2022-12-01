@@ -31,5 +31,9 @@ public class EmployeCommission extends Employe {
         return  this.getSalaire()+this.getNbrItemVendu()*this.getMontantItemVendu();
     }
 
+    public void afficherInformation(){
+        System.out.println("Nom: "+this.getNom()+" Prenom: "+this.getPrenom()+" matricule: "+this.getNumMatricule()+" salaire: "+this.calculerSalaire());
+    }
+
     
 }

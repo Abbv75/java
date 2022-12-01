@@ -1,6 +1,6 @@
 package gestionEmployer;
 
-public class employeHoraire extends Employe{
+public class EmployeHoraire extends Employe{
     private int nbrHeureTravail;
 
     public int getNbrHeureTravail() {
@@ -11,14 +11,18 @@ public class employeHoraire extends Employe{
         this.nbrHeureTravail = nbrHeureTravail;
     }
 
-    public employeHoraire(String numMatricule, String nom, String prenom, double salaire, int nbrHeureTravail) {
+    public EmployeHoraire(String numMatricule, String nom, String prenom, double salaire, int nbrHeureTravail) {
         super(numMatricule, nom, prenom, salaire);
         this.nbrHeureTravail = nbrHeureTravail;
         this.setSalaire(this.getSalaire()*this.getNbrHeureTravail());
     }
 
     public double calculerSalaire(){
-        return  this.getSalaire()+this.getNbrItemVendu()*this.getMontantItemVendu();
+        return  this.getSalaire()+this.getNbrHeureTravail();
+    }
+
+    public void afficherInformation(){
+        System.out.println("Nom: "+this.getNom()+" Prenom: "+this.getPrenom()+" matricule: "+this.getNumMatricule()+" salaire: "+this.calculerSalaire());
     }
 
     
