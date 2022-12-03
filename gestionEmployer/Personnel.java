@@ -20,12 +20,17 @@ public class Personnel {
                 break;
             }
         }
-        if(is_existe){
-            System.out.println("L'utilisateurQSDEFRYUµ4+P+ est deja enregistrer");
+        if(tmp>=20){
+            System.out.println("Nombre maximal d'employer atteint");
         }
         else{
-            this.personnel[i++]=p;
-        }
+            if(is_existe){
+                System.out.println("L'utilisateur est deja enregistrer");
+            }
+            else{
+                this.personnel[i++]=p;
+            }
+        } 
     }
 
     public void search(String matricule){
@@ -49,24 +54,13 @@ public class Personnel {
         }
     }
 
-    public void searchByHoraire(int time){
-        int tmp;
-        boolean is_existe=false;
-        for(tmp=0; tmp<this.personnel.length; tmp++){
-            if(this.personnel[tmp]== null){
-                break;
-            }
-            else if(this.personnel[tmp] instanceof EmployeHoraire){
-                EmployeHoraire tmpEmp= (EmployeHoraire) this.personnel[tmp];
-                if(tmpEmp.getNbrHeureTravail()==time){
-                    is_existe=true;
-                    System.out.println("Matricule: "+tmpEmp.getNumMatricule()+" Nom: "+tmpEmp.getNom()+" prenom: "+tmpEmp.getPrenom()+" salaire: "+tmpEmp.calculerSalaire()+". Il se trouve a la position "+tmp+" du tableau");
-                }
-
-            }
+    public void searchByHoraire(int index){
+        if(this.personnel[index]!=null && this.personnel[index] instanceof EmployeHoraire){
+            EmployeHoraire tmpEmp= (EmployeHoraire) this.personnel[index];
+            System.out.println("Matricule: "+tmpEmp.getNumMatricule()+" Nom: "+tmpEmp.getNom()+" prenom: "+tmpEmp.getPrenom()+" salaire: "+tmpEmp.calculerSalaire());
         }
-        if(!is_existe){
-            System.out.println("Aucun employer n'affectuer cet horaire");
+        else{
+            System.out.println("Aucun employer n'existe a cette position");
         }
     }    
 }
