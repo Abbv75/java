@@ -18,7 +18,7 @@ public class EmployeHoraire extends Employe{
     }
 
     public double calculerSalaire(){
-        return  this.getSalaire()+this.getNbrHeureTravail();
+        return  this.getSalaire()*this.getNbrHeureTravail();
     }
 
     public void afficherInformation(){

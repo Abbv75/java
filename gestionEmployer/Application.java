@@ -12,6 +12,6 @@ public class Application {
         P1.add(E3);
 
         P1.search("E3");
-        P1.searchByHoraire(1);
+        P1.searchByHoraire(2);
     }
 }
