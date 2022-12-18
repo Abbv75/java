@@ -1,7 +1,7 @@
 
 public class Main {
     public static void main(String[] args) {
-        Etudiant E1= new Etudiant("Bore", "Younouss", 18, 1500000, "CM1");
+        Etudiant E1= new Etudiant("Bore", "Younouss", 18,);
         Etudiant E2= new Etudiant("Sidibe", "Sounkalo", 18, 1500000, "CM1");
         Enseignant P1= new Enseignant("Bore", "Younouss", 18, "JAVA", 800000);
         // System.out.println(E1.toString());

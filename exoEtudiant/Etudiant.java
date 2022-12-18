@@ -1,11 +1,14 @@
 
 public class Etudiant extends Personne {
 
-    public Etudiant(String nom, String prenom, int age) {
-        super(nom, prenom, age);
-        //TODO Auto-generated constructor stub
-    }
+    
 
+    public Etudiant(int id, String nom, String prenom, String mail, String telephone, double salaire, int scolaire,
+            String classe) {
+        super(id, nom, prenom, mail, telephone, salaire);
+        this.scolaire = scolaire;
+        this.classe = classe;
+    }
     private int scolaire;
     private String classe;
     public int getScolaire() {
@@ -20,15 +23,16 @@ public class Etudiant extends Personne {
     public void setClasse(String classe) {
         this.classe = classe;
     }
-    public Etudiant(String nom, String prenom, int age, int scolaire, String classe) {
-        super(nom, prenom, age);
-        this.scolaire = scolaire;
-        this.classe = classe;
-    }
+    
     @Override
     public String toString() {
         ;
         return super.toString()+ " ,scolaire=" + scolaire + ", classe=" + classe;
+    }
+    @Override
+    public double calculerSalaire() {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
     

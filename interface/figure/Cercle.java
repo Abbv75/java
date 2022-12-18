@@ -1,6 +1,5 @@
-package abstraction.figure;
 
-public class Cercle extends Figure{
+public class Cercle implements Figure{
     private double rayon;
 
     public Cercle(double rayon) {
@@ -33,4 +32,5 @@ public class Cercle extends Figure{
         // TODO Auto-generated method stub
         System.out.println("Rectangle [rayon=" + rayon +"]");
     }
+    
 }

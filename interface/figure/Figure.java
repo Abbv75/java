@@ -1,5 +1,6 @@
+
 public interface Figure {
-    double perimetre();
-    double surface();
-    void afficher();
+    public double perimetre();
+    public double surface();
+    public void afficher();
 }

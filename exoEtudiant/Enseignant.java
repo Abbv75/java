@@ -1,17 +1,15 @@
 
 public class Enseignant extends Personne {
 
-    public Enseignant(String nom, String prenom, int age) {
-        super(nom, prenom, age);
-        //TODO Auto-generated constructor stub
-    }
 
     private String specialite;
     private int salaire;
-    public Enseignant(String nom, String prenom, int age, String specialite, int salaire) {
-        super(nom, prenom, age);
+    
+    public Enseignant(int id, String nom, String prenom, String mail, String telephone, double salaire,
+            String specialite, int salaire2) {
+        super(id, nom, prenom, mail, telephone, salaire);
         this.specialite = specialite;
-        this.salaire = salaire;
+        salaire = salaire2;
     }
     public String getSpecialite() {
         return specialite;
@@ -19,15 +17,21 @@ public class Enseignant extends Personne {
     public void setSpecialite(String specialite) {
         this.specialite = specialite;
     }
-    public int getSalaire() {
+    
+    @Override
+    public String toString() {
+        return super.toString()+" ,specialite=" + specialite + ", salaire=" + salaire;
+    }
+    @Override
+    public double calculerSalaire() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+    public double getSalaire() {
         return salaire;
     }
     public void setSalaire(int salaire) {
         this.salaire = salaire;
-    }
-    @Override
-    public String toString() {
-        return super.toString()+" ,specialite=" + specialite + ", salaire=" + salaire;
     }
     
     
